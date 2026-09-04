@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
+import Logo from "../../components/Logo";
 
 const CATEGORIES = [
   { id: "produits", label: "Produits" },
@@ -43,7 +44,10 @@ export default function AcheterPage() {
 
   return (
     <div>
-      <h1 className="font-display text-xl font-bold mb-1">UNIVA</h1>
+      <div className="flex items-center gap-2 mb-1">
+        <Logo size={26} />
+        <h1 className="font-display text-xl font-bold">UNIVA</h1>
+      </div>
       <p className="text-sm text-inkSoft mb-5">Explorez tous les univers, au même endroit.</p>
 
       <div className="flex gap-2 overflow-x-auto pb-1 mb-4 -mx-1 px-1">
